@@ -133,5 +133,19 @@ namespace JobList.Tests
       //Assert
       Assert.AreEqual(newOpening2, result);
     }
+
+    [TestMethod]
+    public void Find_ReturnsCorrectOpening_Opening()
+    {
+      //Arrange
+      Opening newOpening1 = new Opening("title", "description", "contactInfo");
+      Opening newOpening2 = new Opening("title2", "description2", "contactInfo2");
+
+      //Act
+      Opening result = Opening.Find(2);
+
+      //Assert
+      Assert.AreEqual(newOpening2, result);
+    }
   }
 }

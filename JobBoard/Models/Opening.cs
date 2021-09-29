@@ -35,18 +35,5 @@ namespace JobList.Models
             return _instances[searchId - 1];
         }
 
-        // public static Opening UpdateOpening(int editId)
-        // {
-        //     if (_instances[editId - 1].Packed)
-        //     {
-        //         _instances[editId -1 ].Packed = false;
-        //         return _instances[editId - 1];
-        //     }
-        //     else
-        //     {
-        //         _instances[editId - 1].Packed = true;
-        //         return _instances[editId - 1];
-        //     }
-        // }
     }
 }

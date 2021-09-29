@@ -1,7 +1,7 @@
 Job Board
-Create a job posting board where a user can create instances of a JobOpening class representing local positions.
+<!-- Create a job posting board where a user can create instances of a JobOpening class representing local positions. -->
 
-It should include properties for a title, description, and contact info for the person posting the job.
+<!-- It should include properties for a title, description, and contact info for the person posting the job. -->
 
 It should allow users to create new JobOpenings by submitting a form.
 
