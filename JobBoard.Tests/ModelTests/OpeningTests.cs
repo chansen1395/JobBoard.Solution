@@ -17,23 +17,24 @@ namespace JobList.Tests
     [TestMethod]
     public void OpeningConstructor_CreatesInstanceOfOpening_Opening()
     {
-      Opening newOpening = new Opening("test");
+      Opening newOpening = new Opening("test - title", "test - description");
       Assert.AreEqual(typeof(Opening), newOpening.GetType());
     }
 
-    // [TestMethod]
-    // public void GetDescription_ReturnsDescription_String()
-    // {
-    //   //Arrange
-    //   string description = "Walk the dog.";
+    [TestMethod]
+    public void GetDescription_ReturnsDescription_String()
+    {
+      //Arrange
+      string title = "Janitor";
+      string description = "Mop the floors and clean the toilets";
 
-    //   //Act
-    //   Item newItem = new Item(description);
-    //   string result = newItem.Description;
+      //Act
+      Opening newOpening = new Opening(title, description);
+      string result = newOpening.Description;
 
-    //   //Assert
-    //   Assert.AreEqual(description, result);
-    // }
+      //Assert
+      Assert.AreEqual(description, result);
+    }
 
     // [TestMethod]
     // public void SetDescription_SetDescription_String()

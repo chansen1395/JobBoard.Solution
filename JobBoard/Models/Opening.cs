@@ -5,16 +5,16 @@ namespace JobList.Models
     public class Opening
     {
         public string Title { get; set; }
-        // public string Description { get; set; }
+        public string Description { get; set; }
         // public string ContactInfo { get; set; }
         public int Id { get; }
         private static List<Opening> _instances = new List<Opening> { };
 
         // public Opening(string title, string description, string contactInfo)
-        public Opening(string title)
+        public Opening(string title, string description)
         {
             Title = title;
-            // Description = description;
+            Description = description;
             // ContactInfo = contactInfo;
 
             // _instances.Add(this);
