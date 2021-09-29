@@ -1,17 +1,11 @@
-@* <form action="/items" method="post">
-  <label for="description">Add a new item</label>
+<form action="/openings" method="post">
+  <label for="title">Add a Title for the Job Opening</label>
+  <input id="title" name="title" type="text">
+
+  <label for="description">Add a description</label>
   <input id="description" name="description" type="text">
 
-  <label for="price">Add a price</label>
-  <input id="price" name="price" type="text">
-
-  <label for="packedOrNot">Packed or not?</label>
-  <select id="packedOrNot" name="packedOrNot">
-    <option value="true">Yes</option>
-    <option value="false">No</option>
-  </select>
-
-  <label for="weight">Add item weight</label>
-  <input id="weight" name="weight" type="text">
+  <label for="contactInfo">Add your contact info (phone number, e-mail, etc.)</label>
+  <input id="contactInfo" name="contactInfo" type="text">
   <button type="submit">Submit</button>
-</form> *@
+</form>

@@ -6,50 +6,38 @@ namespace JobList.Controllers
 {
   public class OpeningsController : Controller
   {
-    
+    [HttpGet("/openings")]
+    public ActionResult Index()
+    {
+      List<Opening> allopenings = Opening.GetAll();
+      return View(allopenings);
+    }
+
+    [HttpGet("/openings/new")]
+    public ActionResult New()
+    {
+      return View();
+    }
+
+    [HttpPost("/openings")]
+    public ActionResult Create(string title, string description, string contactInfo)
+    {
+      Opening myOpening = new Opening(title, description, contactInfo);
+      return RedirectToAction("Index");
+    }
+
+    [HttpPost("/openings/delete")]
+    public ActionResult DeleteAll()
+    {
+      Opening.ClearAll();
+      return View();
+    }
+
+    [HttpGet("/openings/{id}")]
+    public ActionResult Show(int id)
+    {
+      Opening foundOpening = Opening.Find(id);
+      return View(foundOpening);
+    }
   }
-  // {
-  //   [HttpGet("/items")]
-  //   public ActionResult Index()
-  //   {
-  //     List<Item> allItems = Item.GetAll();
-  //     return View(allItems);
-  //   }
-
-  //   [HttpGet("/items/new")]
-  //   public ActionResult New()
-  //   {
-  //     return View();
-  //   }
-
-  //   [HttpPost("/items")]
-  //   public ActionResult Create(string description, double price, bool packedOrNot, double weight)
-  //   {
-  //     Item myItem = new Item(description, price, packedOrNot, weight);
-  //     return RedirectToAction("Index");
-  //   }
-
-  //   [HttpPost("/items/delete")]
-  //   public ActionResult DeleteAll()
-  //   {
-  //     Item.ClearAll();
-  //     return View();
-  //   }
-
-  //   [HttpGet("/items/{id}/edit")]
-  //   public ActionResult Update(int id)
-  //   {
-  //     // Item.UpdateItem(id);
-  //     // return RedirectToAction("Index");
-  //           Item editItem = Item.UpdateItem(id);
-  //     return RedirectToAction("Index");
-  //   }
-
-  //   [HttpGet("/items/{id}")]
-  //   public ActionResult Show(int id)
-  //   {
-  //     Item foundItem = Item.Find(id);
-  //     return View(foundItem);
-  //   }
-  // }
 }

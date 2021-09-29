@@ -1,22 +1,8 @@
-@* <h1>Packer Tracker Item Details: </h1>
+<h1>Job Board Opening Details: </h1>
 
-<h2>Item name: @Model.Description</h2>
-<h2>Item price: @Model.Price</h2>
-<h2>Packed or not: @Model.Packed</h2>
-<h2>Item weight: @Model.Weight</h2>
+<h2>Opening title: @Model.Title</h2>
+<h2>Opening description: @Model.Description</h2>
+<h2>Opening contact information: @Model.ContactInfo</h2>
 
-@if (@Model.Packed)
-  {
-    <form action="/items/@Model.Id/edit" method="get">
-      <button type="submit">Unpack Item</button>
-    </form>
-  }
-
-@if (!@Model.Packed)
-  {
-    <form action="/items/@Model.Id/edit" method="get">
-      <button type="submit">Pack Item</button>
-    </form>
-  }
-<a href='/items/new'>Add another item</a>
-<a href='/items'>View all items</a> *@
+<a href='/openings/new'>Add another opening</a>
+<a href='/openings'>View all current openings</a>
