@@ -1,11 +1,10 @@
-Make a program for users to catalog things they need for upcoming camping, backpacking, bike touring, road trips, or other types of travel.
+Job Board
+Create a job posting board where a user can create instances of a JobOpening class representing local positions.
 
-Before beginning, determine what your data model will look like. Depending on the theme of your site, you may want properties to hold any combination of name, price, purchased or not purchased, weight, manufacturer, packed or not yet packed, and so on.
+It should include properties for a title, description, and contact info for the person posting the job.
 
-Ensure all back-end logic is tested with "Red, Green, Refactor" workflow before building your MVC front-end.
+It should allow users to create new JobOpenings by submitting a form.
 
-At the very least, the front end MVC web application should support RESTful Index, New, Create, and Show routes.
+The application should also list all openings for users to view.
 
-Carefully follow RESTful routing conventions as you build your routes, paying close attention to how dynamic routing passes identifiers through different routes and views.
-
-Challenge: Can you generate a list of things that are not yet packed so they can be checked off? Use forms for this.
+Users should also be able to click on a specific JobOpening from the list to view details.
