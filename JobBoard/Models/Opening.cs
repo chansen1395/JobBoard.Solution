@@ -17,7 +17,7 @@ namespace JobList.Models
             ContactInfo = contactInfo;
 
             _instances.Add(this);
-            // Id = _instances.Count;
+            Id = _instances.Count;
         }
 
         public static List<Opening> GetAll()
@@ -30,10 +30,10 @@ namespace JobList.Models
             _instances.Clear();
         }
 
-        // public static Opening Find(int searchId)
-        // {
-        //     return _instances[searchId - 1];
-        // }
+        public static Opening Find(int searchId)
+        {
+            return _instances[searchId - 1];
+        }
 
         // public static Opening UpdateOpening(int editId)
         // {

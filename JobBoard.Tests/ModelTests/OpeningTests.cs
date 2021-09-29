@@ -102,33 +102,36 @@ namespace JobList.Tests
       CollectionAssert.AreEqual(newList, result);
     }
 
-    // [TestMethod]
-    // public void GetId_ItemsInstantiateWithAnIdAndGetterReturns_Int()
-    // {
-    //   //Arrange
-    //   string description = "Walk the dog.";
-    //   Item newItem = new Item(description);
+    [TestMethod]
+    public void GetId_OpeningsInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      //Arrange
+      string title = "Janitor";
+      string description = "Take out the trash";
+      string contactInfo = "456-432";
+      Opening newOpening = new Opening(title, description, contactInfo);
 
-    //   //Act
-    //   int result = newItem.Id;
+      //Act
+      int result = newOpening.Id;
 
-    //   //Assert
-    //   Assert.AreEqual(1, result);
-    // }
-    // [TestMethod]
-    // public void Find_ReturnsCorrectItem_Item()
-    // {
-    //   //Arrange
-    //   string description01 = "Walk the dog";
-    //   string description02 = "Wash the dishes";
-    //   Item newItem1 = new Item(description01);
-    //   Item newItem2 = new Item(description02);
+      //Assert
+      Assert.AreEqual(1, result);
+    }
 
-    //   //Act
-    //   Item result = Item.Find(2);
+    [TestMethod]
+    public void Find_ReturnsCorrectOpening_Opening()
+    {
+      //Arrange
+      // string title01 = "Janitor";
+      // string description01 = "Wash the dishes";
+      Opening newOpening1 = new Opening("title", "description", "contactInfo");
+      Opening newOpening2 = new Opening("title2", "description2", "contactInfo2");
 
-    //   //Assert
-    //   Assert.AreEqual(newItem2, result);
-    // }
+      //Act
+      Opening result = Opening.Find(2);
+
+      //Assert
+      Assert.AreEqual(newOpening2, result);
+    }
   }
 }
