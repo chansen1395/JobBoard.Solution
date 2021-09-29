@@ -17,7 +17,7 @@ namespace JobList.Tests
     [TestMethod]
     public void OpeningConstructor_CreatesInstanceOfOpening_Opening()
     {
-      Opening newOpening = new Opening("test - title", "test - description");
+      Opening newOpening = new Opening("test - title", "test - description", "test - contactInfo");
       Assert.AreEqual(typeof(Opening), newOpening.GetType());
     }
 
@@ -27,13 +27,18 @@ namespace JobList.Tests
       //Arrange
       string title = "Janitor";
       string description = "Mop the floors and clean the toilets";
+      string contactInfo = "1-800-555-1234";
 
       //Act
-      Opening newOpening = new Opening(title, description);
-      string result = newOpening.Description;
+      Opening newOpening = new Opening(title, description, contactInfo);
+      string result1 = newOpening.Title;
+      string result2 = newOpening.Description;
+      string result3 = newOpening.ContactInfo;
 
       //Assert
-      Assert.AreEqual(description, result);
+      Assert.AreEqual(title, result1);
+      Assert.AreEqual(description, result2);
+      Assert.AreEqual(contactInfo, result3);
     }
 
     // [TestMethod]
