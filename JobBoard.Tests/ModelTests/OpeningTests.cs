@@ -9,10 +9,10 @@ namespace JobList.Tests
   public class OpeningTests : IDisposable
   {
 
-    // public void Dispose()
-    // {
-    //   Item.ClearAll();
-    // }
+    public void Dispose()
+    {
+      Opening.ClearAll();
+    }
 
     [TestMethod]
     public void OpeningConstructor_CreatesInstanceOfOpening_Opening()
@@ -107,6 +107,6 @@ namespace JobList.Tests
 
     //   //Assert
     //   Assert.AreEqual(newItem2, result);
-    }
+    // }
   }
 }

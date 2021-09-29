@@ -5,8 +5,8 @@ namespace JobList.Models
     public class Opening
     {
         public string Title { get; set; }
-        public string Description { get; set; }
-        public string ContactInfo { get; set; }
+        // public string Description { get; set; }
+        // public string ContactInfo { get; set; }
         public int Id { get; }
         private static List<Opening> _instances = new List<Opening> { };
 
@@ -26,10 +26,10 @@ namespace JobList.Models
         //     return _instances;
         // }
 
-        // public static void ClearAll()
-        // {
-        //     _instances.Clear();
-        // }
+        public static void ClearAll()
+        {
+            _instances.Clear();
+        }
 
         // public static Opening Find(int searchId)
         // {

@@ -1,7 +1,7 @@
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
-namespace TripList
+namespace JobList
 {
   public class Program
   {
