@@ -67,35 +67,41 @@ namespace JobList.Tests
       Assert.AreEqual(updatedContactInfo, result3);
     }
 
-    // [TestMethod]
-    // public void GetAll_ReturnsEmptyList_ItemList()
-    // {
-    //   // Arrange
-    //   List<Item> newList = new List<Item> { };
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_OpeningList()
+    {
+      // Arrange
+      List<Opening> newList = new List<Opening> { };
 
-    //   // Act
-    //   List<Item> result = Item.GetAll();
+      // Act
+      List<Opening> result = Opening.GetAll();
 
-    //   // Assert
-    //   CollectionAssert.AreEqual(newList, result);
-    // }
+      // Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
 
-    // [TestMethod]
-    // public void GetAll_ReturnsItems_ItemList()
-    // {
-    //   //Arrange
-    //   string description01 = "Walk the dog";
-    //   string description02 = "Wash the dishes";
-    //   Item newItem1 = new Item(description01);
-    //   Item newItem2 = new Item(description02);
-    //   List<Item> newList = new List<Item> { newItem1, newItem2 };
+    [TestMethod]
+    public void GetAll_ReturnsOpenings_OpeningList()
+    {
+      //Arrange
+      string title01 = "Janitor";
+      string title02 = "Teacher";
+      string description01 = "Empty the trash.";
+      string description02 = "Teach kids too lern";
+      string contactInfo01 = "123-456";
+      string contactInfo02 = "567-678";
+      Opening newOpening1 = new Opening(title01, description01, contactInfo01);
+      Opening newOpening2 = new Opening(title02, description02, contactInfo02);
+     
+      List<Opening> newList = new List<Opening> { newOpening1, newOpening2 };
 
-    //   //Act
-    //   List<Item> result = Item.GetAll();
+      //Act
+      List<Opening> result = Opening.GetAll();
 
-    //   //Assert
-    //   CollectionAssert.AreEqual(newList, result);
-    // }
+      //Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
+
     // [TestMethod]
     // public void GetId_ItemsInstantiateWithAnIdAndGetterReturns_Int()
     // {

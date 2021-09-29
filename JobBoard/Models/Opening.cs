@@ -16,14 +16,14 @@ namespace JobList.Models
             Description = description;
             ContactInfo = contactInfo;
 
-            // _instances.Add(this);
+            _instances.Add(this);
             // Id = _instances.Count;
         }
 
-        // public static List<Opening> GetAll()
-        // {
-        //     return _instances;
-        // }
+        public static List<Opening> GetAll()
+        {
+            return _instances;
+        }
 
         public static void ClearAll()
         {
