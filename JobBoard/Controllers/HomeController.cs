@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace TripList.Controllers
+namespace JobList.Controllers
 {
     public class HomeController : Controller
     {

@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
-using TripList.Models;
+using JobList.Models;
 using System.Collections.Generic;
 
-namespace TripList.Controllers
+namespace JobList.Controllers
 {
-  public class ItemsController : Controller
+  public class OpeningsController : Controller
   {
     [HttpGet("/items")]
     public ActionResult Index()
