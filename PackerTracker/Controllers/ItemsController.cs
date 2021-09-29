@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using ToDoList.Models;
+using TripList.Models;
 using System.Collections.Generic;
 
-namespace ToDoList.Controllers
+namespace TripList.Controllers
 {
   public class ItemsController : Controller
   {
@@ -20,9 +20,9 @@ namespace ToDoList.Controllers
     }
 
     [HttpPost("/items")]
-    public ActionResult Create(string description)
+    public ActionResult Create(string description, double price, bool packedOrNot, double weight)
     {
-      Item myItem = new Item(description);
+      Item myItem = new Item(description, price, packedOrNot, weight);
       return RedirectToAction("Index");
     }
 
@@ -31,6 +31,15 @@ namespace ToDoList.Controllers
     {
       Item.ClearAll();
       return View();
+    }
+
+    [HttpGet("/items/{id}/edit")]
+    public ActionResult Update(int id)
+    {
+      // Item.UpdateItem(id);
+      // return RedirectToAction("Index");
+            Item editItem = Item.UpdateItem(id);
+      return RedirectToAction("Index");
     }
 
     [HttpGet("/items/{id}")]
