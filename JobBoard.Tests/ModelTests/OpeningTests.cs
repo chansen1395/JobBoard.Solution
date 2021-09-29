@@ -41,21 +41,31 @@ namespace JobList.Tests
       Assert.AreEqual(contactInfo, result3);
     }
 
-    // [TestMethod]
-    // public void SetDescription_SetDescription_String()
-    // {
-    //   //Arrange
-    //   string description = "Walk the dog.";
-    //   Item newItem = new Item(description);
+    [TestMethod]
+    public void SetDescription_SetDescription_String()
+    {
+      //Arrange
+      string title = "Janitor..";
+      string description = "Mop the floors and clean the toilets.";
+      string contactInfo = "12345";
+      Opening newOpening = new Opening(title, description, contactInfo);
 
-    //   //Act
-    //   string updatedDescription = "Do the dishes";
-    //   newItem.Description = updatedDescription;
-    //   string result = newItem.Description;
+      //Act
+      string updatedTitle = "CHIEF Janitor.";
+      string updatedDescription = "Take out the trash.";
+      string updatedContactInfo = "56788";
+      newOpening.Title = updatedTitle;
+      newOpening.Description = updatedDescription;
+      newOpening.ContactInfo = updatedContactInfo;
+      string result1 = newOpening.Title;
+      string result2 = newOpening.Description;
+      string result3 = newOpening.ContactInfo;
 
-    //   //Assert
-    //   Assert.AreEqual(updatedDescription, result);
-    // }
+      //Assert
+      Assert.AreEqual(updatedTitle, result1);
+      Assert.AreEqual(updatedDescription, result2);
+      Assert.AreEqual(updatedContactInfo, result3);
+    }
 
     // [TestMethod]
     // public void GetAll_ReturnsEmptyList_ItemList()
